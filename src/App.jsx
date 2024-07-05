@@ -27,6 +27,7 @@ function App() {
         <option value="20">Absolutely amazing! (20%)</option>
       </select>
       </div>
+      <h3>You pay ${(Math.round(billPrice+((((personalRating/100)*billPrice)+((friendRating/100)*billPrice))/2)))} (${billPrice} + ${((((personalRating/100)*billPrice)+((friendRating/100)*billPrice))/2)} tip)</h3>
     </div>
   )
 }
