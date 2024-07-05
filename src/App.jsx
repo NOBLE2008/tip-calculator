@@ -10,12 +10,23 @@ function App() {
       <div>How much was the bill? <input type="text" value={billPrice} onChange={(e) => {
         setBillPrice(Number(e.target.value))
       }}/></div>
-      <div>How did you like the service? <input type="text" value={personalRating} onChange={(e) => {
+      <div>How did you like the service? <select value={personalRating} onChange={(e) => {
         setPersonalRating(Number(e.target.value))
-      }}/></div>
-      <div>How did your friends like the service? <input type="text" value={personalRating} onChange={(e) => {
-        setPersonalRating(Number(e.target.value))
-      }}/></div>
+      }}>
+        <option value="0">Dissatisfied (0%)</option>
+        <option value="5">It was okay (5%)</option>
+        <option value="10">It was good (10%)</option>
+        <option value="20">Absolutely amazing! (20%)</option>
+      </select></div>
+      <div>How did your friends like the service? <select value={friendRating} onChange={(e) => {
+        setFriendRating(Number(e.target.value))
+      }}>
+        <option value="0">Dissatisfied (0%)</option>
+        <option value="5">It was okay (5%)</option>
+        <option value="10">It was good (10%)</option>
+        <option value="20">Absolutely amazing! (20%)</option>
+      </select>
+      </div>
     </div>
   )
 }
